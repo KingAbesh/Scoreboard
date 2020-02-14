@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HNG | Scoreboard</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/index.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light py-2 container d-flex justify-content-between">
+          <div class="mr-auto logo-wrapper">
+            <a class="navbar-brand" href="#"
+              ><img src="../assets/HNG.svg" alt=""
+            /></a>
+          </div>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+           <div
+            class="web"
+          >
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active mr-2">
+                <a class="nav-link text-light" href="#"
+                  >Browse <span class="sr-only">(current)</span></a
+                >
+              </li>
+              <li class="nav-item mr-2">
+                <a class="nav-link text-light" href="#">About Us</a>
+              </li>
+              <li class="nav-item mr-2">
+                <a class="nav-link text-light" href="#">Help</a>
+              </li>
+            </ul>
+          </div>
+           <div class="container nav-hack">
+            <div class="row mx-auto p-4">
+              <ul class="navbar-nav mr-auto d-flex">
+              <li class="nav-item active mr-2">
+                <a class="nav-link text-light" href="#"
+                  >Browse <span class="sr-only">(current)</span></a
+                >
+              </li>
+              <li class="nav-item mr-2">
+                <a class="nav-link text-light" href="#">About Us</a>
+              </li>
+              <li class="nav-item mr-2">
+                <a class="nav-link text-light" href="#">Help</a>
+              </li>
+            </ul>
+            </div>
+          </div>
+         
+      </nav>
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-6 justify-content-sm-center">
+            <h2 class="header-title text-light my-4 my-sm-1">
+              Leaderboard for great coders
+            </h2>
+            <p class="header-subtitle text-light">
+              Brace up for more. Are you thinking of making more points? Join
+              the leaders at the top.
+            </p>
+            <div class="searchContainer d-flex mt-5">
+              <input
+                class="searchBox"
+                type="search"
+                name="search"
+                placeholder="Search Leaderboard..."
+              />
+              <ion-icon name="search-outline" class="searchIcon"></ion-icon>
+            </div>
+          </div>
+          <div class="col-md-6"></div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-md-6"></div>
+          <div class="col-md-6 d-flex select">
+            <div class="dropdown ml-md-auto d-flex">
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <span class="btn-span">Select Week</span>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <span class="dropdown-item hide" id="select-week" href="#"
+                  >...........</span
+                >
+                <span class="dropdown-item" href="#">Current Week</span>
+                <span class="dropdown-item" href="#">Week 1</span>
+                <span class="dropdown-item" href="#">Week 2</span>
+                <span class="dropdown-item" href="#">Week 3</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div
+            class="col-md-12 d-flex justify-content-around align-items-center mt-2 text-white tabs"
+          >
+            <button class="text-center tab active"><a>All</a></button>
+            <button class="text-center tab"><a>Backend</a></button>
+            <button class="text-center tab"><a>Frontend</a></button>
+            <button class="text-center tab"><a>Design</a></button>
+            <button class="text-center tab"><a>Mobile</a></button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row table-wrapper">
+        <table class="table board">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Username</th>
+              <th scope="col">Location</th>
+              <th scope="col">Track</th>
+              <th scope="col">Score</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="spacer"></tr>
+              <th scope="row">1</th>
+              <td>King Abesh</td>
+              <td>Abuja, Nigeria</td>
+              <td>Backend</td>
+              <td>68</td>
+              <td>
+                <div class="table-util d-flex justify-content-around">
+                  <div data-toggle="modal" data-target="#exampleModalCenter"><img src="../assets/share.png" alt="" /></div>
+                  <div class="d-flex justify-content-between" data-toggle="modal" data-target="#exampleModalScrollable"><sub>5</sub><img src="../assets/comment.png" alt="" /></div>
+                  <div class="d-flex justify-content-between"><sub>2</sub><img src="../assets/thumbs-up.png" alt="" /></div>
+                  <div class="d-flex justify-content-between"><sub>0</sub><img src="../assets/thumbs-down.png" alt="" /></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="spacer"></tr>
+             <tr class="spacer"></tr>
+              <th scope="row">2</th>
+              <td>King Abesh</td>
+              <td>Abuja, Nigeria</td>
+              <td>Backend</td>
+              <td>80</td>
+              <td>
+                <div class="table-util d-flex justify-content-around">
+                  <div data-toggle="modal" data-target="#exampleModalCenter"><img src="../assets/share.png" alt="" /></div>
+                  <div data-toggle="modal" data-target="#exampleModalScrollable"><sub>5</sub><img src="../assets/comment.png" alt="" /></div>
+                  <div><sub>2</sub><img src="../assets/thumbs-up.png" alt="" /></div>
+                  <div><sub>0</sub><img src="../assets/thumbs-down.png" alt="" /></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="spacer"></tr>
+             <tr class="spacer"></tr>
+              <th scope="row">3</th>
+              <td>King Abesh</td>
+              <td>Abuja, Nigeria</td>
+              <td>Backend</td>
+              <td>71</td>
+              <td>
+                <div class="table-util d-flex justify-content-around">
+                  <div data-toggle="modal" data-target="#exampleModalCenter"><img src="../assets/share.png" alt="" /></div>
+                  <div data-toggle="modal" data-target="#exampleModalScrollable"><sub>5</sub><img src="../assets/comment.png" alt="" /></div>
+                  <div><sub>2</sub><img src="../assets/thumbs-up.png" alt="" /></div>
+                  <div><sub>0</sub><img src="../assets/thumbs-down.png" alt="" /></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="spacer"></tr>
+            </tr>
+            <tr class="spacer"></tr>
+             <tr class="spacer"></tr>
+              <th scope="row">4</th>
+              <td>King Abesh</td>
+              <td>Abuja, Nigeria</td>
+              <td>Backend</td>
+              <td>71</td>
+              <td>
+                <div class="table-util d-flex justify-content-around">
+                  <div data-toggle="modal" data-target="#exampleModalCenter"><img src="../assets/share.png" alt="" /></div>
+                  <div data-toggle="modal" data-target="#exampleModalScrollable"><sub>5</sub><img src="../assets/comment.png" alt="" /></div>
+                  <div><sub>2</sub><img src="../assets/thumbs-up.png" alt="" /></div>
+                  <div><sub>0</sub><img src="../assets/thumbs-down.png" alt="" /></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="spacer"></tr>
+            </tr>
+            <tr class="spacer"></tr>
+             <tr class="spacer"></tr>
+              <th scope="row">5</th>
+              <td>King Abesh</td>
+              <td>Abuja, Nigeria</td>
+              <td>Backend</td>
+              <td>71</td>
+              <td>
+                <div class="table-util d-flex justify-content-around">
+                  <div data-toggle="modal" data-target="#exampleModalCenter"><img src="../assets/share.png" alt="" /></div>
+                  <div data-toggle="modal" data-target="#exampleModalScrollable"><sub>5</sub><img src="../assets/comment.png" alt="" /></div>
+                  <div><sub>2</sub><img src="../assets/thumbs-up.png" alt="" /></div>
+                  <div><sub>0</sub><img src="../assets/thumbs-down.png" alt="" /></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="spacer"></tr>
+            </tr>
+            <tr class="spacer"></tr>
+             <tr class="spacer"></tr>
+              <th scope="row">6</th>
+              <td>King Abesh</td>
+              <td>Abuja, Nigeria</td>
+              <td>Backend</td>
+              <td>71</td>
+              <td>
+                <div class="table-util d-flex justify-content-around">
+                  <div data-toggle="modal" data-target="#exampleModalCenter"><img src="../assets/share.png" alt="" /></div>
+                  <div data-toggle="modal" data-target="#exampleModalScrollable"><sub>5</sub><img src="../assets/comment.png" alt="" /></div>
+                  <div><sub>2</sub><img src="../assets/thumbs-up.png" alt="" /></div>
+                  <div><sub>0</sub><img src="../assets/thumbs-down.png" alt="" /></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="spacer"></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="container mt-3 mb-5">
+      <div class="row">
+        <div class="col d-flex page justify-content-end">
+          <div id="pagination"></div>
+        </div>
+      </div>
+    </div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="comment-title">
+          <span id="exampleModalScrollableTitle">Comments (5)</span>
+        </div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="comment-card">
+          <div class="container">
+            <div class="row mt-5">
+               <div class="col-2"><img src="../assets/xyluz.png" class="img-fluid" alt="Admin"></div>
+                <div class="col-10 pr-3 pl-0 ml-0">
+                  <div class="d-flex justify-content-between">
+                    <small class="text-black-50 font-weight-bolder">Seyi Onifade</small>
+                    <small class="text-black-50"><ion-icon name="time-outline" class="text-black-50"></ion-icon>&nbsp;2h</small>
+                  </div>
+                  <div class="mt-4">
+                    <small>You are very very talented but I believe that you lack the patience to work in a team, please work on this</small>
+                  </div>
+                </div>
+            </div>
+             <div class="row mt-5">
+               <div class="col-2"><img src="../assets/xyluz.png" class="img-fluid" alt="Admin"></div>
+                <div class="col-10 pr-3 pl-0 ml-0">
+                  <div class="d-flex justify-content-between">
+                    <small class="text-black-50 font-weight-bolder">Seyi Onifade</small>
+                    <small class="text-black-50"><ion-icon name="time-outline" class="text-black-50"></ion-icon>&nbsp;2h</small>
+                  </div>
+                  <div class="mt-4">
+                    <small>You are very very talented but I believe that you lack the patience to work in a team, please work on this</small>
+                  </div>
+                </div>
+            </div>
+             <div class="row mt-5">
+               <div class="col-2"><img src="../assets/xyluz.png" class="img-fluid" alt="Admin"></div>
+                <div class="col-10 pr-3 pl-0 ml-0">
+                  <div class="d-flex justify-content-between">
+                    <small class="text-black-50 font-weight-bolder">Seyi Onifade</small>
+                    <small class="text-black-50"><ion-icon name="time-outline" class="text-black-50"></ion-icon>&nbsp;2h</small>
+                  </div>
+                  <div class="mt-4">
+                    <small>You are very very talented but I believe that you lack the patience to work in a team, please work on this</small>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+          <div class="searchContainer d-flex mt-5 comment">
+              <input
+                class="searchBox"
+                type="search"
+                name="search"
+                placeholder="Add a comment"
+              />
+              <ion-icon name="pencil-outline" class="searchIcon"></ion-icon>
+              <ion-icon name="trash-outline" class="searchIcon"></ion-icon>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header px-4">
+        <div class="comment-title">
+          <h6 id="exampleModalScrollableTitle">Share</h6>
+          <small>Tell the world about your progress</small>
+        </div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body d-flex justify-content-around social-icons">
+        <div><i class="fa fa-facebook-official" aria-hidden="true"></i></div>
+        <div><i class="fa fa-twitter" aria-hidden="true"></i></div>
+        <div><i class="fa fa-whatsapp" aria-hidden="true"></i></div>
+        <div><img src="../assets/instagram.png" class="img-fluid" alt="Admin"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"
+  ></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+  <script src="../js/index.js"></script>
+</html>
